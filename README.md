@@ -3,7 +3,7 @@
 The LeistungsanalyseApp is a Python program designed to create dictionaries including various details such as experiment name, date, supervisor and subject.
 ## Features
 - Allows users to input experiment details such as experiment name, date, supervisor and subject.
-- Saves the experiment dict into a JSON file named 'sample.json'. 
+- Saves the experiment dict into a JSON file named "sample.json". 
 ## How to Use
 1. Clone this repository to your local machine.
 2. Make sure you have Python installed.
@@ -11,7 +11,7 @@ The LeistungsanalyseApp is a Python program designed to create dictionaries incl
     ```bash
     pip install simplejson
     ```
-4. Run the main.py file:
+4. Run the `main.py` file:
      ```bash
     python main.py
     ```
