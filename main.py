@@ -11,8 +11,3 @@ print(experiment)
 
 with open("sample.json", "w") as outfile: 
     json.dump(experiment, outfile)
-
-
-
-
-    #test
