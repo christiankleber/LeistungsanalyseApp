@@ -1,7 +1,7 @@
 import my_functions
 import json
 
-experiment_name = input("Enter the name of the experiment: ")
+experiment_name = input("Enter the name of the experiment:   ")
 date = input("Enter the date of the experiment: ")
 supervisor = input("Enter the first name of the supervisor: ")
 subject = input("Enter the subject of the experiment: ")
