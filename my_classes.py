@@ -1,4 +1,5 @@
 import my_functions
+import json
 
 
 class Person():
@@ -11,6 +12,16 @@ class Person():
     def estimate_max_hr(self):
         estimate_max_hr = my_functions.estimate_max_hr(self.age, self.sex)
         return estimate_max_hr
+    
+    def __dict__(self):
+        return {"first_name": self.first_name, 
+                "last_name": self.last_name, 
+                "age": self.age, 
+                "estimate_max_hr": self.estimate_max_hr()}
+    
+    def save(self, file_path):
+        with open(file_path, 'w') as file:      # 'w' bedeutet, dass die Datei zum Schreiben geöffnet wird
+            json.dump(self.__dict__(), file)
 
 
 
