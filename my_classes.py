@@ -8,11 +8,13 @@ class Person():
         self.last_name = last_name
         self.sex = sex
         self.age = age
-
+        self.est_max_hr = self.estimate_max_hr()
+     
     def estimate_max_hr(self):
         estimate_max_hr = my_functions.estimate_max_hr(self.age, self.sex)
         return estimate_max_hr
-    
+
+
     def save(self, file_path):
         with open(file_path, 'w') as file:      # 'w' bedeutet, dass die Datei zum Schreiben geöffnet wird
             json.dump(self.__dict__, file)
