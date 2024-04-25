@@ -19,16 +19,16 @@ class Supervisor(Person):
 
 
 class Subject(Person):
-    def __init__(self, first_name, last_name, sex, date_of_birth):
+    def __init__(self, first_name, last_name, sex, geburtsdatum):  #hier wird nun das Geburtsdatum benötigt, da wir aus dem Geburtsdatum das Alter kalkulieren sollen
         super().__init__(first_name, last_name)
         self.sex = sex
-        self.__date_of_birth__ = date_of_birth
+        self.__geburtsdatum__ = geburtsdatum #durch __ vor und nach dem Attribut wird es "versteckt"
         self.age = self.age_from_birthdate()
         self.est_max_hr = self.estimate_max_hr()
         
-    def age_from_birthdate(self):
+    def age_from_birthdate(self): #Hier wird aus dem Geburtsdatum das Alter berechnet
         today = datetime.now()
-        birth_date = datetime.strptime(self.__date_of_birth__, "%Y-%m-%d")
+        birth_date = datetime.strptime(self.__geburtsdatum__, "%Y-%m-%d")
         age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
         return age
     
