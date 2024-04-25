@@ -15,17 +15,15 @@ experiment.save("experiment.json")
 # Hier werden die Attribute für den Supervisor abgefragt
 first_name = input("Enter the first name of the supervisor: ")
 last_name = input("Enter the last name: ")
-sex = input("Enter sex: ")
-age = int(input("Enter age: "))
 
-supervisor = my_classes.Person(first_name, last_name, sex, age)
+supervisor = my_classes.Supervisor(first_name, last_name)
 supervisor.save("supervisor.json")
 
 # Hier werden die Attribute für den Subject abgefragt
 first_name = input("Enter the first name of the subject: ")
 last_name = input("Enter the last name: ")
 sex = input("Enter sex: ")
-age = int(input("Enter age: "))
+date_of_birth = input("Enter birth date in year-month-day: ")
 
-subject = my_classes.Person(first_name, last_name, sex, age)
+subject = my_classes.Subject(first_name, last_name, sex, date_of_birth)
 subject.save("subject.json")
